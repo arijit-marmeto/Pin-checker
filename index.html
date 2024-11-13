@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN CHECKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="desktop_div">
+     <!-- Header Container -->
+     <div class="head-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="display: none;" class="bi bi-caret-left-fill back-icon" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+          </svg>
+        <p class="text-center">Check</p>
+        <h2>Your PIN Code</h2>
+        <p class="text-center">for delivery</p>
+
+        <p><span class="current_page">1</span> of 2</p>
+        <div class="bar-container">
+            <span class="bar1"></span>
+            <span class="bar2 btn-disabled"></span>
+        </div>
+    </div>
+
+    <!-- First Page -->
+    <div class="first-page">
+        <div class="content-container">
+            <form id="otp-form">
+                <p style="padding-left: 10px;"> PIN Code</p>
+                <div class="otp-inputs">
+                    <!-- OTP Input Fields -->
+                    <input type="text" maxlength="1" class="otp-input" id="otp-1" />
+                    <input type="text" maxlength="1" class="otp-input" id="otp-2" />
+                    <input type="text" maxlength="1" class="otp-input" id="otp-3" />
+                    <input type="text" maxlength="1" class="otp-input" id="otp-4" />
+                    <input type="text" maxlength="1" class="otp-input" id="otp-5" />
+                    <input type="text" maxlength="1" class="otp-input" id="otp-6" />
+                </div>
+
+                <p style="padding-left: 10px;">Confirm your PIN Code</p>
+                <div class="otp-inputs">
+                    <!-- OTP Confirmation Input Fields (Password Masked) -->
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-1-confirm" />
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-2-confirm" />
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-3-confirm" />
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-4-confirm" />
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-5-confirm" />
+                    <input type="password" maxlength="1" class="otp-input-confirm" id="otp-6-confirm" />
+                </div>
+                <div>
+                    <span class="same" style="display: none; color: green;">Your PIN codes are the same</span>
+                </div>
+                <button type="submit" class="submit-btn btn-disabled">Continue</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Second Page -->
+    <div class="second-page" style="display: none;">
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title"></h2>
+                <p class="card-description delivery" style="display: none;">Item can be delivered to this pin code</p>
+                <p class="card-description nodelivery" style="display: none; color: red;">Item cannot be delivered to this pin code</p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

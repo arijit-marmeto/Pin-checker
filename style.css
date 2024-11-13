@@ -1,0 +1,230 @@
+/* Ensure no overflow on the entire body */
+html, body {
+    height: 100%; /* Full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent the page from scrolling */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f9; */
+    height: 100vh;  /* Full height of the viewport */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Header container styling */
+.head-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 100; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* Container for OTP input */
+.otp-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    max-width: 90%;  /* Ensure the container scales on smaller screens */
+    margin-top: 120px; /* Allow space for the fixed header */
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* OTP input fields container */
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* OTP input fields */
+.otp-input, .otp-input-confirm {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.otp-input:focus, .otp-input-confirm:focus {
+    border-color: red;
+    outline: none;
+}
+
+/* Submit button styles */
+.submit-btn {
+    background-color: red;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;  /* Make the button full width */
+    font-size: 18px;
+}
+
+.submit-btn:hover {
+    background-color: red;
+}
+
+/* Disabled state for the button */
+.btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0;
+    opacity: 0.4;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Bar styles */
+.bar-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center; /* Center the bars */
+}
+
+.bar1, .bar2 {
+    height: 5px;
+    width: 45%;
+    background-color: red;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* First and second page transition styles */
+.first-page,
+.second-page {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* position: absolute; */
+    width: 100%;
+    height: calc(100vh - 120px);  /* Full height minus header space */
+    bottom: 0;  /* Align the pages at the bottom */
+    left: 0;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Initially hide the second page */
+.second-page {
+    position: absolute;
+    align-items: flex-start;
+    justify-content: center;
+    top: 200px;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Style the first page during transition */
+.first-page.fade-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Style the second page during transition */
+.second-page.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Media queries for responsiveness */
+
+/* For small screens, such as phones */
+
+.back-icon{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+}
+.card {
+    /* position: absolute; */
+    margin-top: 25px;
+    top: 10px;
+    left: 20%;
+    width: 300px;  /* Width of the card */
+    padding: 20px;  /* Padding inside the card */
+    background-color: #fff;  /* White background */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card description styling */
+.card-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button inside the card */
+.card-btn {
+    background-color: #3498db;  /* Blue background */
+    color: white;  /* White text */
+    padding: 12px 20px;  /* Padding around the text */
+    border: none;  /* No border */
+    border-radius: 5px;  /* Rounded corners for the button */
+    cursor: pointer;  /* Pointer cursor on hover */
+    font-size: 1rem;
+    transition: background-color 0.3s ease;  /* Smooth color change */
+}
+
+/* Button hover effect */
+.card-btn:hover {
+    background-color: #2980b9;  /* Darker blue when hovering */
+}
+
+@media only screen and (min-width: 768px) {
+    .desktop_div{
+        width: 64%;
+        position: absolute;
+        left: 19%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 90vh;
+        top: 21px;
+    }
+    .head-container{
+        width: none;
+    }
+  }
+
