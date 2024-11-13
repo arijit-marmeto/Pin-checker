@@ -216,15 +216,15 @@ h2 {
 
 @media only screen and (min-width: 768px) {
     .desktop_div{
-        width: 64%;
+        width: 45%;
         position: absolute;
-        left: 19%;
+        left: 20%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 90vh;
         top: 21px;
     }
     .head-container{
-        width: none;
+        width: 90%;
     }
   }
 
