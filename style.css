@@ -80,7 +80,7 @@ h2 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;  /* Make the button full width */
+    width: 50%;  /* Make the button full width */
     font-size: 18px;
 }
 
@@ -213,7 +213,13 @@ h2 {
 .card-btn:hover {
     background-color: #2980b9;  /* Darker blue when hovering */
 }
-
+.btn-box{
+    width: 100%;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
 @media only screen and (min-width: 768px) {
     .desktop_div{
         width: 45%;
@@ -227,4 +233,19 @@ h2 {
         width: 90%;
     }
   }
-
+  @media only screen and (max-width: 600px) {
+    .otp-input, .otp-input-confirm {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid #eee;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+    .head-container{
+        width: 90%;
+    }
+    
+  }
+  
